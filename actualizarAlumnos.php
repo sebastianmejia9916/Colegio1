@@ -1,0 +1,21 @@
+<?php include 'conexion.php';
+$identificacion= $_REQUEST['identificacion'];
+
+$seleccionar = $conex -> query("SELECT * FROM estudiantes where identificacion ='$identificacion' ");
+if ($fila = $seleccionar -> fetch_assoc()){
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>ACTUALIZAR ALUMNOS</title>
+</head>
+<body>
+    <form action="updateAlumnos.php" method="post">
+        <input type="hidden" name="identificacion"  value="<?php echo $identificacion ?>">
+        <input type="text" name="nombre" placeholder="Nombre del Alumno" value="<?php echo $fila['nombre'] ?>"><br>><br>
+        <input type="text" name="apellido" placeholder="Apellido del Alumno"  value="<?php echo $fila['apellido'] ?>"><br>><br>
+        <input type="text" name="grado" placeholder="Grado actual que cursa el Alumno"  value="<?php echo $fila['grado'] ?>"><br>><br>
+        <input type="submit" value="actualizar Alumno">
+    </form>

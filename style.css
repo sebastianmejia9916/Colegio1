@@ -1,0 +1,42 @@
+*{
+    background-color:tan;
+    margin:0;
+    padding:0;
+    text-align:center;
+    
+    
+}
+table{
+    margin:0;
+    padding:0;
+    text-align:center;
+    
+
+
+}
+
+header{
+    color:black;
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+    
+}
+
+form{
+    
+    width: 100;
+    color:white;
+    border-radius: 10%;
+}
+
+input{
+    color:black;
+    }
+
+
+::placeholder{
+    color:black;
+    padding: 0.5em;
+}
+
